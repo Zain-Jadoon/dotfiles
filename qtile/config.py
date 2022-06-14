@@ -143,14 +143,6 @@ widget_defaults = dict(
 )
 def get_widgets():
     widget_list = [
-   widget.Spacer(length=3, background="#000000"), 
-    widget.TextBox(
-        text="",
-        padding=0,
-        fontsize=30,
-        foreground = colors["blue"],
-        background = "#00000000",
-    ),
     widget.CurrentLayout(
         background = colors["blue"]
         ),
@@ -175,11 +167,11 @@ def get_widgets():
     widget.TextBox(
         text="",
         foreground = colors["pink"],
-        background = "#00000000",
+        background = "#191724",
         padding=0,
         fontsize=19,
     ),
-    widget.Spacer(length=10, background="#00000000"), 
+    widget.Spacer(length=10, background="#191724"), 
     widget.Prompt(),
     widget.WindowName(),
     widget.Chord(
@@ -195,7 +187,7 @@ def get_widgets():
         padding=0,
         fontsize=30,
         foreground = colors["dark_grey"],
-        background = "#00000000",
+        background = "#191724",
     ),
 
     widget.CPU(
@@ -257,14 +249,6 @@ def get_widgets():
             "Button1": lazy.spawn("pkill xinit"),
         }
     ),
-    widget.TextBox(
-        text="",
-        foreground = colors["yellow"],
-        background = "#00000000",
-        padding=0,
-        fontsize=19,
-    ),
-    widget.Spacer(length=3, background="#00000000"), 
     ]
     return widget_list
 
@@ -275,7 +259,7 @@ screens = [
         top=bar.Bar(
             get_widgets(),
             24,
-            background="#ff0000.0", opacity=1
+            background="#191724", opacity=1
 
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
