@@ -1,4 +1,6 @@
 # Zain Jadoon's Dotifles
+![screenshot of desktop](/img/qtile1.png "screenshot of desktop")
+![screenshot of desktop](/img/qtile2.png "screenshot of desktop")
 ## Requirements
 * Qtile 
 * Zathura
