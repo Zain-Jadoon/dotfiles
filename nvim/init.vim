@@ -10,7 +10,7 @@ set softtabstop=4
 set shiftwidth=4
 set autoindent
 set fileformat=unix
-set guifont=Comic\ Code\ Ligatures:h8
+set guifont=Jet\ Brains\ Mono\ Ligatures:h8
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'rose-pine/neovim'
