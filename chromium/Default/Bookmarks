@@ -1,0 +1,47 @@
+{
+   "checksum": "c202b804517ca693f0f4133c43083362",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13319954694289558",
+            "date_last_used": "0",
+            "guid": "47980885-3f7c-4be9-84a6-21d8a9261950",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "permutations - Google Search",
+            "type": "url",
+            "url": "https://www.google.com/search?q=permutations&oq=permutations&aqs=chrome..69i57j0i131i433i512l5j0i512l4.507j0j7&sourceid=chrome&ie=UTF-8"
+         } ],
+         "date_added": "13319954266942350",
+         "date_last_used": "0",
+         "date_modified": "13319954694289558",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13319954266942351",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13319954266942352",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

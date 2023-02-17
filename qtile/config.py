@@ -27,6 +27,7 @@ def autostart():
 
 mod = "mod1"
 keys = [
+    Key([mod], "u", lazy.spawn("~/.config/qtile/lock.sh")),
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
@@ -68,7 +69,6 @@ group_hotkeys = "123456789"
 for g, k in zip(groups, group_hotkeys):
     keys.extend(
         [
-            # mod1 + letter of group = switch to group
             Key(
                 [mod],
                 k,
@@ -82,40 +82,9 @@ for g, k in zip(groups, group_hotkeys):
                 lazy.window.togroup(g.name, switch_group=False),
                 desc=f"Switch to & move focused window to group {g.name}",
             ),
-            # Or, use below if you prefer not to switch to that group.
-            # # mod1 + shift + letter of group = move focused window to group
-            # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-            #     desc="move focused window to group {}".format(i.name)),
         ]
     )
 
-
-
-# groups = [Group(i) for i in "123456789"]
-# 
-# for i in groups:
-#     keys.extend(
-#         [
-#             # mod1 + letter of group = switch to group
-#             Key(
-#                 [mod],
-#                 i.name,
-#                 lazy.group[i.name].toscreen(),
-#                 desc="Switch to group {}".format(i.name),
-#             ),
-#             # mod1 + shift + letter of group = switch to & move focused window to group
-#             Key(
-#                 [mod, "shift"],
-#                 i.name,
-#                 lazy.window.togroup(i.name, switch_group=True),
-#                 desc="Switch to & move focused window to group {}".format(i.name),
-#             ),
-#             # Or, use below if you prefer not to switch to that group.
-#             # # mod1 + shift + letter of group = move focused window to group
-#             # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-#             #     desc="move focused window to group {}".format(i.name)),
-#         ]
-#     )
 
 layouts = [
 
@@ -224,11 +193,11 @@ def get_widgets():
  
      widget.Battery(
         format="{char} {percent:2.0%}",
-        charge_char="",
-        discharge_char="",
-        full_char="",
-        unknown_char="",
-        empty_char="",
+        charge_char="bat:",
+        discharge_char="bat:",
+        full_char="bat:",
+        unknown_char="bat:",
+        empty_char="bat:",
         show_short_text=False,
         background=colors["green"],
         ),
@@ -242,7 +211,7 @@ def get_widgets():
     ),
     
     widget.TextBox(
-        text = "",
+        text = "⏻",
         fontsize = "22",
         background = colors["yellow"],
         mouse_callbacks={

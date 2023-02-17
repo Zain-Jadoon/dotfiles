@@ -1,0 +1,7 @@
+refresh-on-startup yes
+reload-threads 100
+
+
+
+bind-key SPACE macro-prefix 
+macro v set browser "setsid -f youtube-dl -o ~/Documents/videos" ; open-in-browser ; set browse

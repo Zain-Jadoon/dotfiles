@@ -4,7 +4,6 @@ syntax enable
 set noswapfile
 set scrolloff=7
 set backspace =indent,eol,start
-
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -29,5 +28,6 @@ let g:airline_theme='gruvbox'
 
 let NerdTreeQuitOnOpen=1
 nmap <F2> :NERDTreeToggle<CR>
-
+let mapleader = "\<Space>"
+nnoremap <Leader>v :vsplit<CR>
 

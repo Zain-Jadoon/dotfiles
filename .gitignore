@@ -1,1 +1,15 @@
 pulse/
+cmus/
+cordless/
+Qtproject.conf
+dconf/
+discord/
+gtk-3.0/
+htop/
+pavucontrol.ini
+pcrops/
+spotify/
+spotify-tui/
+sytemd/
+test.sh
+
