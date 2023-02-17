@@ -1,7 +1,0 @@
-2023/02/01-20:31:44.581 d180 Reusing MANIFEST /home/zain/.config/chromium/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/02/01-20:31:44.581 d180 Recovering log #3
-2023/02/01-20:31:44.581 d180 Reusing old log /home/zain/.config/chromium/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/000003.log 
-2023/02/01-20:32:30.859 ce1f Level-0 table #5: started
-2023/02/01-20:32:30.860 ce1f Level-0 table #5: 2333 bytes OK
-2023/02/01-20:32:30.861 ce1f Delete type=0 #3
-2023/02/01-20:32:30.861 ce1f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
