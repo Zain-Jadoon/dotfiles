@@ -14,7 +14,7 @@ o.softtabstop = 4
 o.shiftwidth = 4
 o.autoindent = true
 vim.opt.termguicolors = true
-vim.opt.guifont = { "JetBrains Mono", "h8" }
+vim.opt.guifont = { "JetBrains Mono", "h2" }
 
 -- General Settings
 o.encoding="utf-8"

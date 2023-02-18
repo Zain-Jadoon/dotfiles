@@ -1,12 +1,11 @@
-add_newline = true
-format = """
-[╭─user───❯](bold blue) $username
-[┣─system─❯](bold yellow) $hostname
-[┣─project❯](bold red) $directory$rust$git_branch$git_state$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
-[╰─cmd────❯](bold green)
-"""
+#format = """
+#[╭─user───❯](bold blue) $username
+#[┣─system─❯](bold yellow) $hostname
+#[┣─project❯](bold red) $directory$rust$git_branch$git_state$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
+#[╰─cmd────❯](bold green)
+#"""
 [username]
-style_user = "green bold"
+style_user = "yellow bold"
 style_root = "red bold"
 format = "[$user]($style) "
 disabled = false
@@ -14,13 +13,13 @@ show_always = true
 
 [hostname]
 ssh_only = false
-format = 'on [$hostname](bold purple) '
+format = 'on [$hostname](bold green) '
 trim_at = "."
 disabled = false
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+success_symbol = "[➜](bold yellow)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
 error_symbol = "[✗](bold red)"
 
 #  
@@ -151,6 +150,4 @@ symbol = "ﯣ "
 format = "via [ Node.js $version](bold green) "
 detect_files = ["package.json", ".node-version"]
 detect_folders = ["node_modules"]
-
-
 
