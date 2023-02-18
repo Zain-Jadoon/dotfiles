@@ -2,10 +2,9 @@ pulse/
 flameshot/
 chromium/
 cmus/
-cordless/
-QtProject.conf
 systemd/
 ngrok/
+cordless/
 dconf/
 discord/
 gtk-3.0/
