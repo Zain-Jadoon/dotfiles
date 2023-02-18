@@ -63,7 +63,7 @@ keys = [
     Key([mod], "i", lazy.layout.shrink()),
 ]
 
-groups = [Group(i) for i in ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨","٩"]]
+groups = [Group(i) for i in ["1", "2", "3", "4", "5", "6", "7", "8","9"]]
 group_hotkeys = "123456789"
 
 for g, k in zip(groups, group_hotkeys):
