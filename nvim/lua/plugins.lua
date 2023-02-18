@@ -1,8 +1,7 @@
 require("packer").startup(function(use)
 		use "wbthomason/packer.nvim"
-		--use "nvim-lua/plenary.nvim"
-		use "nvim-tree/nvim-web-devicons"
 
+		use "nvim-tree/nvim-web-devicons"
 		use {
 			"windwp/nvim-autopairs",
 		    config = function() require("nvim-autopairs").setup {} end
@@ -19,53 +18,48 @@ require("packer").startup(function(use)
 		}
 
 
-		use({
-		    'rose-pine/neovim',
-		    as = 'rose-pine',
-		    config = function()
-		        require("rose-pine").setup()
-		        vim.cmd('colorscheme rose-pine')
-		    end
-		})
+		-- use({
+		--     'rose-pine/neovim',
+		--     as = 'rose-pine',
+		--     config = function()
+		--         require("rose-pine").setup()
+		--         vim.cmd('colorscheme rose-pine')
+		--     end
+		-- })
+
+		use{
+			'ellisonleao/gruvbox.nvim',
+			 config = function()
+				require("plugins.gruvbox")
+		    	end}
 
 		use {
 		    'goolord/alpha-nvim',
 		    requires = { 'nvim-tree/nvim-web-devicons' },
-
 			config = function ()
-    		    local alpha = require('alpha')
-    		    local dashboard = require('alpha.themes.dashboard')
-    		    dashboard.section.header.val = {
-    		        [[                                                                       ]],
-    		        [[  ██████   █████                   █████   █████  ███                  ]],
-    		        [[ ░░██████ ░░███                   ░░███   ░░███  ░░░                   ]],
-    		        [[  ░███░███ ░███   ██████   ██████  ░███    ░███  ████  █████████████   ]],
-    		        [[  ░███░░███░███  ███░░███ ███░░███ ░███    ░███ ░░███ ░░███░░███░░███  ]],
-    		        [[  ░███ ░░██████ ░███████ ░███ ░███ ░░███   ███   ░███  ░███ ░███ ░███  ]],
-    		        [[  ░███  ░░█████ ░███░░░  ░███ ░███  ░░░█████░    ░███  ░███ ░███ ░███  ]],
-    		        [[  █████  ░░█████░░██████ ░░██████     ░░███      █████ █████░███ █████ ]],
-    		        [[ ░░░░░    ░░░░░  ░░░░░░   ░░░░░░       ░░░      ░░░░░ ░░░░░ ░░░ ░░░░░  ]],
-    		        [[                                                                       ]],
-    		        [[                     λ it be like that sometimes λ                     ]],
-    		    }
+				require("plugins.alpha")
+			end}
 
-    		    dashboard.section.buttons.val = {
-    		        dashboard.button("f", "  Find file", ":Telescope find_files hidden=true no_ignore=true<CR>"),
-    		        dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-    		        dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
-    		        dashboard.button("u", "  Update plugins", ":Lazy sync<CR>"),
-    		        dashboard.button("r", "  Recently opened files", "<cmd>Telescope oldfiles<CR>"),
-    		        dashboard.button("l", "  Open last session", "<cmd>RestoreSession<CR>"),
-    		        dashboard.button("q", "  Quit", ":qa<CR>"),
-    		    }
+		--     use {
+		--       'nvim-tree/nvim-tree.lua',
+		--       requires = {
+		--         'nvim-tree/nvim-web-devicons', 
+		--       },
+		--       tag = 'nightly',
+		--       config = function()
+		--     	require("nvim-tree").setup()	 
+		--       end
+		--     }		
+		use {
+		  'nvim-tree/nvim-tree.lua',
+		  requires = {
+		    'nvim-tree/nvim-web-devicons', -- optional, for file icons
+		  },
+		  tag = 'nightly',
+		  config = function()
+			require("nvim-tree").setup()
+		  end
+		}	
 
-    		    local handle = io.popen('fortune')
-    		    local fortune = handle:read("*a")
-    		    handle:close()
-    		    dashboard.section.footer.val = fortune
-    		    alpha.setup(dashboard.opts)
-				
-			end	
-		}
 end)
 
