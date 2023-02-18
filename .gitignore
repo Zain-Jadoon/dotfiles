@@ -4,7 +4,7 @@ chromium/
 cmus/
 cordless/
 QtProject.conf
-systemd/user/
+systemd/
 ngrok/
 dconf/
 discord/
@@ -17,3 +17,4 @@ spotify-tui/
 sytemd/
 test.sh
 nvim/plugin/
+
