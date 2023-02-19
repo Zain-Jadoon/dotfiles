@@ -1,4 +1,4 @@
-local custom_gruvbox = require('lualine.themes.gruvbox')
+local custom_gruvbox = require('plugins.linetheme')
 custom_gruvbox.normal.c.bg = '#0E1018'
 
 
