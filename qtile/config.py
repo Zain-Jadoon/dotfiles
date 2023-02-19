@@ -6,7 +6,7 @@ import os
 from libqtile import hook
 
 
-terminal = "alacritty"
+terminal = "st"
 colors = {
   "blue": "#286983",
   "pink": "#b4637a",

@@ -18,14 +18,6 @@ require("packer").startup(function(use)
 		}
 
 
-		-- use({
-		--     'rose-pine/neovim',
-		--     as = 'rose-pine',
-		--     config = function()
-		--         require("rose-pine").setup()
-		--         vim.cmd('colorscheme rose-pine')
-		--     end
-		-- })
 
 		use{
 			'ellisonleao/gruvbox.nvim',
@@ -40,16 +32,6 @@ require("packer").startup(function(use)
 				require("plugins.alpha")
 			end}
 
-		--     use {
-		--       'nvim-tree/nvim-tree.lua',
-		--       requires = {
-		--         'nvim-tree/nvim-web-devicons', 
-		--       },
-		--       tag = 'nightly',
-		--       config = function()
-		--     	require("nvim-tree").setup()	 
-		--       end
-		--     }		
 		use {
 		  'nvim-tree/nvim-tree.lua',
 		  requires = {
@@ -59,7 +41,29 @@ require("packer").startup(function(use)
 		  config = function()
 			require("nvim-tree").setup()
 		  end
-		}	
+		}
+		use{
+			"lukas-reineke/indent-blankline.nvim",
+			config = function()
+			require("indent_blankline").setup {
+			    show_current_context = true,
+			    show_current_context_start = true,
+			}
+			end
 
+		} 
+		use {
+		  'nvim-lualine/lualine.nvim',
+		  requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+		  config = function()
+				require("plugins.line")
+		  end
+		}
+		use{
+			'andweeb/presence.nvim',
+			config = function()
+				require("plugins.discord")
+			end
+		}
 end)
 
