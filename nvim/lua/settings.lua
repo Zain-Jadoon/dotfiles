@@ -22,4 +22,3 @@ o.swapfile = false
 o.clipboard = "unnamedplus"
 o.fileformat = "unix"
 
-

@@ -8,13 +8,12 @@ from libqtile import hook
 
 terminal = "st"
 colors = {
-  "blue": "#286983",
-  "pink": "#b4637a",
-  "yellow": "#ea9d34",
-  "peach": "#ebbcba",
+  "blue": "#0F2028",
+  "pink": "#9E3208",
+  "yellow":"#BA7222",
   #"green": "#56949f", #9ccfd8
-  "green": "#9ccfd8",
-  "lavender": "#907aa9",
+  "green": "#0B6E4F",
+  "lavender": "#BC9B76",
   "white": "#FFFFFF",
   "light_grey": "#e0def4",
   "dark_grey": "#6e6a86",
@@ -118,15 +117,15 @@ def get_widgets():
     widget.TextBox(
         text="",
         foreground = colors["blue"],
-        background = colors["pink"],
+        background = colors["blue"],
         padding=0,
         fontsize=19,
     ),
     widget.GroupBox(
         fontsize=18,
         highlight_method='line',
-        highlight_color = [colors["pink"],colors["pink"]],
-        background = colors["pink"],
+        highlight_color = [colors["blue"],colors["blue"]],
+        background = colors["blue"],
         foreground = colors["white"],
         inactive = colors["white"],
         this_screen_border= colors["light_grey"],
@@ -135,12 +134,12 @@ def get_widgets():
         ),
     widget.TextBox(
         text="",
-        foreground = colors["pink"],
-        background = "#191724",
+        foreground = colors["blue"],
+        background = "#0E1018",
         padding=0,
         fontsize=19,
     ),
-    widget.Spacer(length=10, background="#191724"), 
+    widget.Spacer(length=10, background="#0E1018"), 
     widget.Prompt(),
     widget.WindowName(),
     widget.Chord(
@@ -155,14 +154,14 @@ def get_widgets():
         text="",
         padding=0,
         fontsize=30,
-        foreground = colors["dark_grey"],
-        background = "#191724",
+        foreground = colors["yellow"],
+        background = "#0E1018",
     ),
 
     widget.CPU(
         format="CPU: {load_percent:04}%",
         mouse_callbacks={"Button1": lazy.spawn("alacritty -e htop")},
-        background=colors["dark_grey"],
+        background=colors["yellow"],
 
     ),
     widget.TextBox(
@@ -170,7 +169,7 @@ def get_widgets():
         padding=0,
         fontsize=30,
         foreground=colors["blue"],
-        background=colors["dark_grey"],
+        background=colors["yellow"],
     ),
     widget.CapsNumLockIndicator(fmt="⌨ {}", background=colors["blue"]),
     
@@ -185,12 +184,11 @@ def get_widgets():
     widget.Clock(format="🕐 %a %d %b %Y, %I:%M %p", background=colors["lavender"]),
     widget.TextBox(
         text="",
-        foreground = colors["green"],
+        foreground = colors["blue"],
         background = colors["lavender"],
         padding=0,
         fontsize=18,
     ),
- 
      widget.Battery(
         format="{char} {percent:2.0%}",
         charge_char="bat:",
@@ -199,13 +197,13 @@ def get_widgets():
         unknown_char="bat:",
         empty_char="bat:",
         show_short_text=False,
-        background=colors["green"],
+        background=colors["blue"],
         ),
 
     widget.TextBox(
         text="",
         foreground = colors["yellow"],
-        background = colors["green"],
+        background = colors["blue"],
         padding=0,
         fontsize=18,
     ),
@@ -228,7 +226,7 @@ screens = [
         top=bar.Bar(
             get_widgets(),
             24,
-            background="#191724", opacity=1
+            background="#0E1018", opacity=1
 
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta

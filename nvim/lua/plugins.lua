@@ -65,5 +65,16 @@ require("packer").startup(function(use)
 				require("plugins.discord")
 			end
 		}
+		use{
+			"lambdalisue/suda.vim"
+		}
+		use {
+    	"jcdickinson/wpm.nvim",
+    	config = function()
+    	    require("wpm").setup({
+    	    })
+    	end
+}	
+
 end)
 
